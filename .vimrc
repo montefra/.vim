@@ -1,6 +1,8 @@
 " start pathogen
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+" create help tags
+Helptags
 
 
 set number   " add the numbero of the line

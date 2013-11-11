@@ -55,7 +55,7 @@ set maxfuncdepth=300
 if has("autocmd")
   au BufRead,BufNewFile *.tex set tw=80 "maximum textwidth=80 for tex file
   au BufRead,BufNewFile *.py set shiftwidth=4  "four spaces indent for python files
-  au BufRead,BufNewFile *.ipy set shiftwidth=4  "four spaces indent for python files
+  au BufRead,BufNewFile *.ipy set shiftwidth=4  "four spaces indent for ipython files
 endif
 
 "from vim help: If you prefer "cw" to include the space after a word, use this mapping: 

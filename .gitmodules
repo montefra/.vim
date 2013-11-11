@@ -16,3 +16,9 @@
 [submodule "bundle/clang_complete"]
 	path = bundle/clang_complete
 	url = https://github.com/Rip-Rip/clang_complete.git
+[submodule "bundle/vim-latex"]
+	path = bundle/vim-latex
+	url = https://github.com/vim-latex/vim-latex.git
+[submodule "bundle/howmuch"]
+	path = bundle/howmuch
+	url = https://github.com/sk1418/HowMuch.git

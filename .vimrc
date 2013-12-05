@@ -4,38 +4,43 @@ execute pathogen#infect()
 " create help tags
 Helptags
 
-
 set number   " add the numbero of the line
  
-filetype plugin indent on    " set indent according to the file type
-syntax on       " enable sintax color
-let fortran_free_source=1
+filetype plugin on
 
+filetype indent on    " set indent according to the file type
 set autoindent      " indent automatic
 "set smartindent     " and smart
+
+syntax on       " enable sintax color
+let fortran_free_source=1
 
 set expandtab      "substitute tabs with spaces
 set shiftwidth=2
 
-set showmatch       " when searcing enhance the matching
 
 set vb t_vb=        " disable beep and flash
-
 set ruler           " enable the ruler at the lower right corner
 
+set showmatch       " when searcing enhance the matching
 set incsearch       " enable search in the command line
-
 set ignorecase smartcase    " ignore case when searching, but in a smart way
+
+" The 'scrolloff' (scroll offset) option determines the number of context
+" lines you would like to see above and below the cursor.
+set scrolloff=5
+
 
 "color comments in different color
 "highlight Comment ctermfg=lightblue
 colorscheme zellner
 
 "needed from vim-latex
-filetype plugin on
 set grepprg=grep\ -nH\ --color\ $*
-filetype indent on
 let g:tex_flavor='latex'
+" smart indentation in latex
+let g:tex_indent_items = 1
+let g:tex_indent_brace = 0
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")

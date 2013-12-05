@@ -29,6 +29,12 @@ setlocal spell spelllang=en_gb
 "maximum width of a line
 set tw=90
 
+" redefine figure command.
+let g:Tex_Env_figure =    "\\begin{figure}\<cr>\\centering\<cr>\\includegraphics[width=80mm, keepaspectratio]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"
+let g:Tex_Env_figures =  "\\begin{figure*}\<cr>\\centering\<cr>\\includegraphics[width=1600mm, keepaspectratio]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure*}<++>"
+
+call IMAP ('EFS', g:Tex_Env_figures, 'tex')
+
 "map some commonly used command to for equation, table, figure, appendix and
 "section reference
 call IMAP ('TAB', "Table \\ref{<++>}<++>", 'tex')

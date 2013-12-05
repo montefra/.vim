@@ -30,10 +30,14 @@ set ignorecase smartcase    " ignore case when searching, but in a smart way
 " lines you would like to see above and below the cursor.
 set scrolloff=5
 
-
-"color comments in different color
-"highlight Comment ctermfg=lightblue
-colorscheme zellner
+"let distro = system("awk '/^NAME=/ {print $1}' /etc/os-release")
+let distro = system(". /etc/os-release; echo -n $NAME")
+if distro == "openSUSE"
+  "color comments in different color
+  highlight Comment ctermfg=lightblue
+else
+  colorscheme zellner
+endif
 
 "needed from vim-latex
 set grepprg=grep\ -nH\ --color\ $*
@@ -61,6 +65,9 @@ if has("autocmd")
   au BufRead,BufNewFile *.tex set tw=80 "maximum textwidth=80 for tex file
   au BufRead,BufNewFile *.py set shiftwidth=4  "four spaces indent for python files
   au BufRead,BufNewFile *.ipy set shiftwidth=4  "four spaces indent for ipython files
+  
+  " markdown filetype file
+  au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=markdown
 endif
 
 "from vim help: If you prefer "cw" to include the space after a word, use this mapping: 

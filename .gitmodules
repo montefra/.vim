@@ -31,3 +31,6 @@
 [submodule "bundle/instant-markdown"]
 	path = bundle/instant-markdown
 	url = https://github.com/suan/vim-instant-markdown.git
+[submodule "bundle/ctrlspace"]
+	path = bundle/ctrlspace
+	url = https://github.com/szw/vim-ctrlspace.git

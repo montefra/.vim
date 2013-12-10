@@ -70,6 +70,9 @@ if has("autocmd")
   au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=markdown
 endif
 
+" Simply Fold pluging: enable preview
+let g:SimpylFold_docstring_preview = 1
+
 "from vim help: If you prefer "cw" to include the space after a word, use this mapping: 
 map cw dwi
 map cW dWi

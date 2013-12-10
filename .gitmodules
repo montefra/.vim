@@ -34,3 +34,6 @@
 [submodule "bundle/ctrlspace"]
 	path = bundle/ctrlspace
 	url = https://github.com/szw/vim-ctrlspace.git
+[submodule "bundle/SimpylFold"]
+	path = bundle/SimpylFold
+	url = https://github.com/tmhedberg/SimpylFold.git

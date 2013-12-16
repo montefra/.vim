@@ -1,27 +1,36 @@
+"""""""""""""""""""""""""""""""""
 " start pathogen
+"""""""""""""""""""""""""""""""""
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 " create help tags
 Helptags
 
-set number   " add the numbero of the line
+"""""""""""""""""""""""""""""""""
+" general configuration options
+"""""""""""""""""""""""""""""""""
+" add the numbero of the line
+set number   
  
 filetype plugin on
-
+" indentation
 filetype indent on    " set indent according to the file type
 set autoindent      " indent automatic
 "set smartindent     " and smart
 
-syntax on       " enable sintax color
+" syntax color
 let fortran_free_source=1
+syntax on 
 
-set expandtab      "substitute tabs with spaces
+" never use tabs and set default tab to 2 spaces
+set expandtab
 set shiftwidth=2
+" disable beep and flash
+set vb t_vb=        
+" enable the ruler at the lower right corner
+set ruler
 
-
-set vb t_vb=        " disable beep and flash
-set ruler           " enable the ruler at the lower right corner
-
+" searching
 set showmatch       " when searcing enhance the matching
 set incsearch       " enable search in the command line
 set ignorecase smartcase    " ignore case when searching, but in a smart way
@@ -29,22 +38,6 @@ set ignorecase smartcase    " ignore case when searching, but in a smart way
 " The 'scrolloff' (scroll offset) option determines the number of context
 " lines you would like to see above and below the cursor.
 set scrolloff=5
-
-"let distro = system("awk '/^NAME=/ {print $1}' /etc/os-release")
-let distro = system(". /etc/os-release; echo -n $NAME")
-if distro == "openSUSE"
-  "color comments in different color
-  highlight Comment ctermfg=lightblue
-else
-  colorscheme zellner
-endif
-
-"needed from vim-latex
-set grepprg=grep\ -nH\ --color\ $*
-let g:tex_flavor='latex'
-" smart indentation in latex
-let g:tex_indent_items = 1
-let g:tex_indent_brace = 0
 
 " Only do this part when compiled with support for autocommands
 if has("autocmd")
@@ -55,12 +48,42 @@ if has("autocmd")
   \ endif
 endif
 
-"save file with old undos so that it is possible to go back in the history
+" save file with old undos so that it is possible to go back in the history
 set undofile
 
-"maxfuncdepth for user functions
-set maxfuncdepth=300
+"""""""""""""""""""""""""""""""""
+" Set color schemes and other colors
+"""""""""""""""""""""""""""""""""
+"let distro = system("awk '/^NAME=/ {print $1}' /etc/os-release")
+let distro = system(". /etc/os-release; echo -n $NAME")
+if distro == "openSUSE"
+  "color comments in different color
+  highlight Comment ctermfg=lightblue
+else
+  colorscheme zellner
+endif
 
+"status line hightlight. green: current window, red: others windows
+hi StatusLine ctermbg=white ctermfg=blue
+hi StatusLineNC ctermbg=white ctermfg=red
+
+"""""""""""""""""""""""""""""""""
+" vim-latex settings
+"""""""""""""""""""""""""""""""""
+set grepprg=grep\ -nH\ --color\ $*
+let g:tex_flavor='latex'
+" smart indentation in latex
+let g:tex_indent_items = 1
+let g:tex_indent_brace = 0
+
+
+"maxfuncdepth for user functions
+"set maxfuncdepth=300
+
+"""""""""""""""""""""""""""""""""
+" setting specific to some file type
+" see if it's better to move it somewhere else
+"""""""""""""""""""""""""""""""""
 if has("autocmd")
   au BufRead,BufNewFile *.tex set tw=80 "maximum textwidth=80 for tex file
   au BufRead,BufNewFile *.py set shiftwidth=4  "four spaces indent for python files
@@ -72,6 +95,10 @@ endif
 
 " Simply Fold pluging: enable preview
 let g:SimpylFold_docstring_preview = 1
+
+"""""""""""""""""""""""""""""""""
+" custom remapping
+"""""""""""""""""""""""""""""""""
 
 "from vim help: If you prefer "cw" to include the space after a word, use this mapping: 
 map cw dwi
@@ -102,10 +129,6 @@ fun! FindChar(back, inclusive, exclusive)
     endif
   endif
 endfun
-
-"status line hightlight. green: current window, red: others windows
-hi StatusLine ctermbg=green ctermfg=white
-hi StatusLineNC ctermbg=white ctermfg=red
 
 " Gundo map to open the tree
 nnoremap <F4> :GundoToggle<CR>

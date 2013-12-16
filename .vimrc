@@ -9,7 +9,7 @@ Helptags
 """""""""""""""""""""""""""""""""
 " general configuration options
 """""""""""""""""""""""""""""""""
-" add the numbero of the line
+" add the line number
 set number   
  
 filetype plugin on
@@ -22,6 +22,9 @@ set autoindent      " indent automatic
 let fortran_free_source=1
 syntax on 
 
+" enable spelling. In codes checks only string and comments
+set spell
+
 " never use tabs and set default tab to 2 spaces
 set expandtab
 set shiftwidth=2
@@ -31,7 +34,7 @@ set vb t_vb=
 set ruler
 
 " searching
-set showmatch       " when searcing enhance the matching
+set showmatch       " when searching enhance the matching
 set incsearch       " enable search in the command line
 set ignorecase smartcase    " ignore case when searching, but in a smart way
 
@@ -93,7 +96,7 @@ if has("autocmd")
   au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=markdown
 endif
 
-" Simply Fold pluging: enable preview
+" Simply Fold plugin: enable preview
 let g:SimpylFold_docstring_preview = 1
 
 """""""""""""""""""""""""""""""""

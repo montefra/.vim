@@ -31,7 +31,7 @@ set tw=90
 
 " redefine figure command.
 let g:Tex_Env_figure =    "\\begin{figure}\<cr>\\centering\<cr>\\includegraphics[width=80mm, keepaspectratio]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"
-let g:Tex_Env_figures =  "\\begin{figure*}\<cr>\\centering\<cr>\\includegraphics[width=1600mm, keepaspectratio]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure*}<++>"
+let g:Tex_Env_figures =  "\\begin{figure*}\<cr>\\centering\<cr>\\includegraphics[width=160mm, keepaspectratio]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure*}<++>"
 
 call IMAP ('EFS', g:Tex_Env_figures, 'tex')
 

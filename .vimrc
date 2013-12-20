@@ -88,12 +88,12 @@ let g:tex_indent_brace = 0
 " see if it's better to move it somewhere else
 """""""""""""""""""""""""""""""""
 if has("autocmd")
-  au BufRead,BufNewFile *.tex set tw=80 "maximum textwidth=80 for tex file
-  au BufRead,BufNewFile *.py set shiftwidth=4  "four spaces indent for python files
-  au BufRead,BufNewFile *.ipy set shiftwidth=4  "four spaces indent for ipython files
+  autocmd BufRead,BufNewFile *.tex set tw=80 "maximum textwidth=80 for tex file
+  autocmd BufRead,BufNewFile *.py set shiftwidth=4  "four spaces indent for python files
+  autocmd BufRead,BufNewFile *.ipy set shiftwidth=4  "four spaces indent for ipython files
   
   " markdown filetype file
-  au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=markdown
+  autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn}   set filetype=markdown
 endif
 
 " Simply Fold plugin: enable preview
@@ -108,14 +108,14 @@ map cw dwi
 map cW dWi
 
 "Makes f,F,T and t work across multiple lines
-nmap <silent> f :call FindChar(0, 0, 0)<cr>
-omap <silent> f :call FindChar(0, 1, 0)<cr>
-nmap <silent> F :call FindChar(1, 0, 0)<cr>
-omap <silent> F :call FindChar(1, 1, 0)<cr>
-nmap <silent> t :call FindChar(0, 0, 1)<cr>
-omap <silent> t :call FindChar(0, 0, 0)<cr>
-nmap <silent> T :call FindChar(1, 0, 1)<cr>
-omap <silent> T :call FindChar(1, 0, 0)<cr>
+nnoremap <silent> f :call FindChar(0, 0, 0)<cr>
+onoremap <silent> f :call FindChar(0, 1, 0)<cr>
+nnoremap <silent> F :call FindChar(1, 0, 0)<cr>
+onoremap <silent> F :call FindChar(1, 1, 0)<cr>
+nnoremap <silent> t :call FindChar(0, 0, 1)<cr>
+onoremap <silent> t :call FindChar(0, 0, 0)<cr>
+nnoremap <silent> T :call FindChar(1, 0, 1)<cr>
+onoremap <silent> T :call FindChar(1, 0, 0)<cr>
 
 "Function to make f,F,t,T work across multiple lines
 fun! FindChar(back, inclusive, exclusive)
@@ -125,10 +125,10 @@ fun! FindChar(back, inclusive, exclusive)
   endif
   if search('\V' . nr2char(getchar()), flag)
     if a:inclusive
-      norm! l
+      normal! l
     endif
     if a:exclusive
-      norm! h
+      normal! h
     endif
   endif
 endfun

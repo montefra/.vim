@@ -27,7 +27,7 @@ set iskeyword+=:
 "spelling
 setlocal spell spelllang=en_gb
 "maximum width of a line
-set tw=90
+setlocal textwidth=90
 
 " redefine figure command.
 let g:Tex_Env_figure =    "\\begin{figure}\<cr>\\centering\<cr>\\includegraphics[width=80mm, keepaspectratio]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"

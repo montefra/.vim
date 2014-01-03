@@ -1,6 +1,6 @@
 " some specific folding for fortran taken from
 " https://bbs.archlinux.org/viewtopic.php?id=68362
-set foldmethod=syntax
+setlocal foldmethod=syntax
 
 let fortran_fold=1
 "Additionally you can force folding on conditionals and multiline comments trhough

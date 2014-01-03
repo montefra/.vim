@@ -1,3 +1,3 @@
 " bibtex specific options
 
-set foldmethod=syntax
+setlocal foldmethod=syntax

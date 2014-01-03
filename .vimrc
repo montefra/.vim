@@ -107,3 +107,8 @@ endfun
 
 " Gundo map to open the tree
 nnoremap <F4> :GundoToggle<CR>
+
+" NERDTree map
+nnoremap <F3> :NERDTreeToggle<CR>
+nnoremap <leader>ntf :NERDTreeFocus<CR>
+

@@ -29,6 +29,15 @@ setlocal spell spelllang=en_gb
 "maximum width of a line
 setlocal textwidth=90
 
+" disable textwidth and wrap if in a table.
+"function! IsSpecialLine()
+  "let lline = getline('.') 
+  "let is_table_line = lline =~# '\\\@<!&'
+  "let is_hline = lline =~# '\\\@<!\\hline'
+  "return is_table_line || is_hline
+"endfunction
+"autocmd CursorMoved,CursorMovedI <buffer> if IsSpecialLine() | setlocal textwidth=0 nowrap | else | setlocal textwidth=90 wrap | endif
+
 " redefine figure command.
 let g:Tex_Env_figure =    "\\begin{figure}\<cr>\\centering\<cr>\\includegraphics[width=80mm, keepaspectratio]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"
 let g:Tex_Env_figures =  "\\begin{figure*}\<cr>\\centering\<cr>\\includegraphics[width=160mm, keepaspectratio]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure*}<++>"

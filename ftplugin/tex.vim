@@ -1,9 +1,11 @@
-"set targets
+" vim-latex suite settings{{{
+"set targets {{{
 let g:Tex_DefaultTargetFormat = 'pdf'
 let g:Tex_MultipleCompileFormats = 'dvi,ps,pdf'
 let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+"}}}
 
-"set compilation rules
+"set compilation rules {{{
 let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -scr-special -synctex=1 $*'
 let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
 let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
@@ -13,43 +15,62 @@ let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
 let g:Tex_ViewRule_dvi = '/usr/bin/okular --unique'
 let g:Tex_ViewRule_ps = '/usr/bin/okular --unique'
 let g:Tex_ViewRule_pdf = '/usr/bin/okular --unique'
+"}}}
 
-"local setting when using latex-vim
-"save and compile
+"save and compile{{{
 map <f12> :w<cr><leader>ll``
 imap <f12> <ESC>:w<cr><leader>ll``i
+"}}}
 
-" TIP: if you write your \label's as \label{fig:something}, then if you
+" TIP: if you write your \label's as \label{fig:something}, then if you{{{
 " type in \ref{fig: and press <C-n> you will automatically cycle through
 " all the figure labels. Very useful!
 set iskeyword+=:
+"}}}
 
-"spelling
-setlocal spell spelllang=en_gb
-"maximum width of a line
-setlocal textwidth=90
-
-" disable textwidth and wrap if in a table.
-"function! IsSpecialLine()
-  "let lline = getline('.') 
-  "let is_table_line = lline =~# '\\\@<!&'
-  "let is_hline = lline =~# '\\\@<!\\hline'
-  "return is_table_line || is_hline
-"endfunction
-"autocmd CursorMoved,CursorMovedI <buffer> if IsSpecialLine() | setlocal textwidth=0 nowrap | else | setlocal textwidth=90 wrap | endif
-
-" redefine figure command.
+" redefine figure command.{{{
 let g:Tex_Env_figure =    "\\begin{figure}\<cr>\\centering\<cr>\\includegraphics[width=80mm, keepaspectratio]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure}<++>"
 let g:Tex_Env_figures =  "\\begin{figure*}\<cr>\\centering\<cr>\\includegraphics[width=160mm, keepaspectratio]{<+file+>}\<cr>\\caption{<+caption text+>}\<cr>\\label{fig:<+label+>}\<cr>\\end{figure*}<++>"
 
 call IMAP ('EFS', g:Tex_Env_figures, 'tex')
+"}}}
 
-"map some commonly used command to for equation, table, figure, appendix and
-"section reference
+" maps for equation, table, figure, appendix and section reference{{{
 call IMAP ('TAB', "Table \\ref{<++>}<++>", 'tex')
 call IMAP ('SECT', "Section \\ref{<++>}<++>", 'tex')
 call IMAP ('CHAP', "Chapter \\ref{<++>}<++>", 'tex')
 call IMAP ('FIG', "Figure \\ref{<++>}<++>", 'tex')
 call IMAP ('EQU', "equation (\\ref{<++>})<++>", 'tex')
 call IMAP ('APP', "Appendix \\ref{<++>}<++>", 'tex')
+"}}}
+"}}}
 
+" spelling
+setlocal spell spelllang=en_gb
+
+" Width of text{{{
+" By default the text is 
+let s:textwidth = 90
+let &l:textwidth=s:textwidth
+
+" Toggle between textwidth and wrap and textwidth=0 and nowrap. {{{
+" When editing a table, can be useful to have all the '&' aligned (using e.g.
+" ':Tabularize /&') but without line brakes and wraps. Besides it's very
+" annoying when line brakes "happens" while editing.
+" As hopefully tables must be edited only from time to time, one can toggle
+" wrap and textwidth by hand. 
+function! ToggleTwWrap() "{{{
+  " if textwidth and wrap is used, then disable them
+  if &textwidth > 0
+    let &l:textwidth=0
+    setlocal nowrap
+  else " otherwise re-enable them
+    let &l:textwidth=s:textwidth
+    setlocal wrap
+  endif
+endfunction
+"}}}
+
+"}}}
+
+"}}}

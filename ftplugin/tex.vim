@@ -50,7 +50,7 @@ setlocal spell spelllang=en_gb
 
 " Width of text{{{
 " By default the text is 
-let s:textwidth = 90
+let s:textwidth = 80
 let &l:textwidth=s:textwidth
 
 " Toggle between textwidth and wrap and textwidth=0 and nowrap. {{{

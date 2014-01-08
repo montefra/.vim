@@ -2,10 +2,15 @@
 " Set color schemes and other colors
 """""""""""""""""""""""""""""""""
 
+" get the distro name {{{
+let s:distro = system("awk '/^NAME=/ {print $1}' /etc/os-release")
+let s:distro = split(s:distro, "=")[1]
+let s:distro = strpart(s:distro, 0, strlen(s:distro)-1)
+" }}}
+
 " Select color-scheme based on distro {{{
-"let distro = system("awk '/^NAME=/ {print $1}' /etc/os-release")
-let distro = system(". /etc/os-release; echo -n $NAME")
-if distro == "openSUSE"
+"let distro = system(". /etc/os-release; echo -n $NAME")
+if s:distro == "openSUSE"
   " color comments in different color
   highlight Comment ctermfg=lightblue
 else
@@ -15,8 +20,8 @@ endif
 "}}}
 
 "status line hightlight. blue: current window, red: others windows {{{
-hi StatusLine ctermbg=white ctermfg=blue
-hi StatusLineNC ctermbg=white ctermfg=red
+highlight StatusLine ctermbg=white ctermfg=blue
+highlight StatusLineNC ctermbg=white ctermfg=red
 "}}}
 
 " Latex-vim{{{
@@ -32,6 +37,11 @@ highlight link BibAuthorHeader BibAuthor
 highlight link BibLocationHeader BibLocation
 "}}}
   
+" SpellLocal on is white on light blue background, {{{
+" making it not very easy to read
+  highlight SpellLocal term=underline ctermbg=blue gui=undercurl guisp=Cyan
+"}}}
+
 " return the highlight group syntax under the cursor:{{{
 " http://vim.wikia.com/wiki/Showing_syntax_highlight_group_in_statusline
 " used when tweaking with colors

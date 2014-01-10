@@ -1,16 +1,15 @@
 """""""""""""""""""""""""""""""""
 " Set color schemes and other colors
 """""""""""""""""""""""""""""""""
-
 " get the distro name {{{
-let s:distro = system("awk '/^NAME=/ {print $1}' /etc/os-release")
-let s:distro = split(s:distro, "=")[1]
-let s:distro = strpart(s:distro, 0, strlen(s:distro)-1)
+"let s:distro = system("awk '/^NAME=/ {print $1}' /etc/os-release")
+"let s:distro = split(substitute(s:distro, "\n", "", ""), "=")[1]
+"let s:distro = substitute(s:distro,'"', "", "g")
+let s:distro = system(". /etc/os-release; echo -n $NAME")
 " }}}
 
 " Select color-scheme based on distro {{{
-"let distro = system(". /etc/os-release; echo -n $NAME")
-if s:distro == "openSUSE"
+if s:distro ==? "openSUSE"
   " color comments in different color
   highlight Comment ctermfg=lightblue
 else

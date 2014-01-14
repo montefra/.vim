@@ -18,8 +18,8 @@ let g:Tex_ViewRule_pdf = '/usr/bin/okular --unique'
 "}}}
 
 "save and compile{{{
-map <f12> :w<cr><leader>ll``
-imap <f12> <ESC>:w<cr><leader>ll``i
+map <buffer> <f12> :w<cr><leader>ll``
+imap <buffer> <f12> <ESC>:w<cr><leader>ll``i
 "}}}
 
 " TIP: if you write your \label's as \label{fig:something}, then if you{{{

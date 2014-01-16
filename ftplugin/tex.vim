@@ -45,8 +45,15 @@ call IMAP ('APP', "Appendix \\ref{<++>}<++>", 'tex')
 "}}}
 "}}}
 
+" don't highlight search in tex files, it gets annoying because of some
+" command in vim-latex suite
+set nohlsearch 
+
 " spelling
 setlocal spell spelllang=en_gb
+
+" Operator pending map to be able the yank inside a $
+call CountJump#TextObject#MakeWithCountSearch('<buffer>', '$', 'ai', 'v', '\$', '\$')
 
 " Width of text{{{
 " By default the text is 
@@ -59,7 +66,7 @@ let &l:textwidth=s:textwidth
 " annoying when line brakes "happens" while editing.
 " As hopefully tables must be edited only from time to time, one can toggle
 " wrap and textwidth by hand. 
-function! ToggleTwWrap() "{{{
+function! ToggleWrap() "{{{
   " if textwidth and wrap is used, then disable them
   if &textwidth > 0
     let &l:textwidth=0

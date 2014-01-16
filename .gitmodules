@@ -46,3 +46,6 @@
 [submodule "bundle/transpose"]
 	path = bundle/transpose
 	url = https://github.com/salsifis/vim-transpose.git
+[submodule "bundle/CountJump"]
+	path = bundle/CountJump
+	url = https://github.com/vim-scripts/CountJump.git

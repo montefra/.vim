@@ -23,6 +23,9 @@ syntax on
 " enable spelling. In codes checks only string and comments
 set spell
 
+" set default line width 
+set textwidth=80
+
 " never use tabs and set default tab to 2 spaces
 set expandtab
 set shiftwidth=2

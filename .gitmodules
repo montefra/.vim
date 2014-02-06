@@ -49,3 +49,6 @@
 [submodule "bundle/CountJump"]
 	path = bundle/CountJump
 	url = https://github.com/vim-scripts/CountJump.git
+[submodule "bundle/systemd-syntax"]
+	path = bundle/systemd-syntax
+	url = https://github.com/kurayama/systemd-vim-syntax.git

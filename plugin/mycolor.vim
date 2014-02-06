@@ -13,8 +13,8 @@ if s:distro ==? "openSUSE"
   " color comments in different color
   highlight Comment ctermfg=lightblue
 else
-  colorscheme zellner
-  highlight Directory ctermfg=lightblue
+ "colorscheme zellner
+ "highlight Directory ctermfg=lightblue
 endif
 "}}}
 
@@ -35,10 +35,14 @@ highlight link BibTitleHeader BibTitle
 highlight link BibAuthorHeader BibAuthor
 highlight link BibLocationHeader BibLocation
 "}}}
-  
+ 
+" fold {{{
+highlight Folded term=standout,bold cterm=bold ctermfg=Black ctermbg=DarkCyan guifg=Cyan guibg=DarkGrey
+" }}}
+
 " SpellLocal on is white on light blue background, {{{
 " making it not very easy to read
-  highlight SpellLocal term=underline ctermbg=blue gui=undercurl guisp=Cyan
+highlight SpellLocal term=underline ctermbg=blue gui=undercurl guisp=Cyan
 "}}}
 
 " return the highlight group syntax under the cursor:{{{

@@ -1,4 +1,5 @@
 " start pathogen {{{
+" let g:pathogen_disabled = [] 
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 " create help tags

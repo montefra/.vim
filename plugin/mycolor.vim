@@ -15,6 +15,7 @@ if s:distro ==? "openSUSE"
 else
  "colorscheme zellner
  "highlight Directory ctermfg=lightblue
+  highlight Comment ctermfg=darkgreen
 endif
 "}}}
 

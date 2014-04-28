@@ -10,9 +10,8 @@ Helptags
 " add the line number
 set number   
  
-filetype plugin on
+filetype plugin indent on
 " indentation
-filetype indent on    " set indent according to the file type
 set autoindent      " indent automatic
 "set smartindent     " and smart
 
@@ -29,6 +28,7 @@ set textwidth=80
 " never use tabs and set default tab to 2 spaces
 set expandtab
 set shiftwidth=2
+set shiftround
 
 " disable beep and flash
 set vb t_vb=        

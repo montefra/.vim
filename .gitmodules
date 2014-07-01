@@ -52,3 +52,6 @@
 [submodule "bundle/systemd-syntax"]
 	path = bundle/systemd-syntax
 	url = https://github.com/kurayama/systemd-vim-syntax.git
+[submodule "bundle/vim-flake8"]
+	path = bundle/vim-flake8
+	url = https://github.com/nvie/vim-flake8.git

@@ -13,8 +13,8 @@ if s:distro ==? "openSUSE"
   " color comments in different color
   highlight Comment ctermfg=lightblue
 else
- "colorscheme zellner
- "highlight Directory ctermfg=lightblue
+  colorscheme zellner
+  "highlight Directory ctermfg=lightblue
   highlight Comment ctermfg=darkgreen
 endif
 "}}}

@@ -1,5 +1,5 @@
 " start pathogen {{{
-let g:pathogen_disabled = ["clang_complete"] 
+let g:pathogen_disabled = ["clang_complete", "vim-airline"] 
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 " create help tags
@@ -82,3 +82,6 @@ noremap <F3> :NERDTreeToggle<CR>
 noremap <leader>ntf :NERDTreeFocus<CR>
 "}}}
 
+" vim-airline setting {{{
+let g:airline#extensions#tabline#enabled = 1
+" }}}

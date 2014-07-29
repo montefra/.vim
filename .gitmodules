@@ -55,3 +55,6 @@
 [submodule "bundle/Jinja2-Syntax"]
 	path = bundle/Jinja2-Syntax
 	url = https://github.com/Glench/Vim-Jinja2-Syntax.git
+[submodule "jedi-vim"]
+	path = jedi-vim
+	url = https://github.com/davidhalter/jedi-vim.git

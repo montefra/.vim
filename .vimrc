@@ -28,6 +28,7 @@ set textwidth=80
 
 " never use tabs and set default tab to 2 spaces
 set expandtab
+set tabstop=4
 set shiftwidth=2
 set shiftround
 

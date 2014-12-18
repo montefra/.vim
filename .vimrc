@@ -1,5 +1,5 @@
 " start pathogen {{{
-let g:pathogen_disabled = ["clang_complete", "vim-airline"] 
+let g:pathogen_disabled = ["vim-airline"]  " clang_complete, 
 runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 " create help tags
@@ -84,4 +84,16 @@ noremap <leader>ntf :NERDTreeFocus<CR>
 
 " vim-airline setting {{{
 let g:airline#extensions#tabline#enabled = 1
+" }}}
+
+" clang complete setting {{{
+let g:clang_library_path='/usr/lib/llvm-3.5/lib'
+let g:clang_use_library=1
+let g:clang_complete_copen=1
+let g:clang_hl_errors=1
+" let g:clang_periodic_quickfix=1
+nnoremap <F7> :call g:ClangUpdateQuickFix() <CR>
+imap <F7> <ESC> <F7>
+let g:clang_jumpto_declaration_key='<leader>d'
+" let g:clang_jumpto_declaration_in_preview_key='<leader>d'
 " }}}

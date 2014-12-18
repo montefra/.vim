@@ -61,3 +61,6 @@
 [submodule "bundle/vim-airline"]
 	path = bundle/vim-airline
 	url = https://github.com/bling/vim-airline.git
+[submodule "bundle/svnj"]
+	path = bundle/svnj
+	url = https://github.com/juneedahamed/svnj.vim.git

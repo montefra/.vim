@@ -4,6 +4,8 @@ runtime bundle/pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 " create help tags
 Helptags
+" pathogen add a 'Vsplit' command that I find extremely annoying.
+delcommand Vsplit
 "}}}
 
 " general configuration options{{{

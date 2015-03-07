@@ -35,6 +35,10 @@ let g:Tex_Env_figures =  "\\begin{figure*}\<cr>\\centering\<cr>\\includegraphics
 call IMAP ('EFS', g:Tex_Env_figures, 'tex')
 "}}}
 
+" beamer frame environment{{
+call IMAP('EFE', "\\begin{frame}\<CR>\\frametitle{<++>}\<CR><++>\<CR>\\end{frame}<++>", 'tex')
+" }}
+
 " maps for equation, table, figure, appendix and section reference{{{
 call IMAP ('TAB', "Table \\ref{<++>}<++>", 'tex')
 call IMAP ('SECT', "Section \\ref{<++>}<++>", 'tex')

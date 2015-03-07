@@ -1,3 +1,38 @@
+" vim-plug settings {{{
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
+
+call plug#begin('~/.vim/plugged')
+
+" load always 
+Plug 'tpope/vim-fugitive'
+Plug 'vim-scripts/svnj.vim'
+Plug 'vim-latex/vim-latex'
+
+" On-demand loading
+" action
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'mbbill/undotree', { 'on':  'UndotreeToggle' }
+Plug 'AndrewRadev/linediff.vim', { 'on':  'Linediff' }
+Plug 'godlygeek/tabular', { 'on':  'Tabularize' }
+
+" file type
+Plug 'vim-scripts/CountJump', { 'for':  'tex' }
+Plug 'suan/vim-instant-markdown', { 'for':  'markdown' }
+Plug 'gabrielelana/vim-markdown', { 'for':  'markdown' }
+Plug 'Glench/Vim-Jinja2-Syntax', { 'for':  'jinja' }
+Plug 'tmhedberg/SimpylFold', { 'for':  'python' }
+Plug 'Matt-Deacalion/vim-systemd-syntax', { 'for':  'systemd' }
+
+" keep it for reference, but not install now
+" Plug 'sk1418/HowMuch'
+" Plug 'salsifis/vim-transpose'
+call plug#end()
+
+" }}}
 
 " get the distro name {{{
 let g:distro = system(". /etc/os-release; echo -n $NAME")
@@ -70,8 +105,8 @@ let g:tex_indent_brace = 0
 let g:SimpylFold_docstring_preview = 1
 "}}}
 
-" Gundo map {{{
-noremap <F4> :GundoToggle<CR>
+" undotree map {{{
+noremap <F4> :UndotreeToggle<CR>
 "}}}
 
 " NERDTree map {{{

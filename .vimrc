@@ -1,12 +1,3 @@
-" start pathogen {{{
-let g:pathogen_disabled = ["vim-airline"]  " clang_complete, 
-runtime bundle/pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-" create help tags
-Helptags
-" pathogen add a 'Vsplit' command that I find extremely annoying.
-delcommand Vsplit
-"}}}
 
 " get the distro name {{{
 let g:distro = system(". /etc/os-release; echo -n $NAME")

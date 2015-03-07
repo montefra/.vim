@@ -1,5 +1,4 @@
-*zip
-*tar.gz
 .netrwhist
-!*.vim
+plug.vim
 spell
+plugged

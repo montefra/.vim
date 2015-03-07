@@ -8,6 +8,10 @@ Helptags
 delcommand Vsplit
 "}}}
 
+" get the distro name {{{
+let g:distro = system(". /etc/os-release; echo -n $NAME")
+" }}}
+
 " general configuration options{{{
 
 " add the line number
@@ -89,7 +93,12 @@ let g:airline#extensions#tabline#enabled = 1
 " }}}
 
 " clang complete setting {{{
-let g:clang_library_path='/usr/lib/llvm-3.5/lib'
+if g:distro ==? "kubuntu"  
+  "openSUSE"
+  let g:clang_library_path='/usr/lib/llvm-3.5/lib'
+"else
+  "let g:clang_library_path='/usr/lib/llvm-3.5/lib'
+endif
 let g:clang_use_library=1
 let g:clang_complete_copen=1
 let g:clang_hl_errors=1

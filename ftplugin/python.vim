@@ -8,8 +8,7 @@ set textwidth=79
 imap <buffer> <F7> <ESC> <F7>
 
 " Toggle between tabs and not tabs (my default){{{
-"}}}
-function! ToggleTab() "{{{
+function! ToggleTab()
   " enable toggling
   if exists("b:use_tabs")  "{{{
     let b:use_tabs = !b:use_tabs

@@ -11,8 +11,9 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/svnj.vim'
 Plug 'vim-latex/vim-latex'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 Plug 'ervandew/supertab'
+Plug 'scrooloose/syntastic'
+Plug 'szw/vim-ctrlspace'
 
 " On-demand loading
 " action
@@ -22,18 +23,20 @@ Plug 'AndrewRadev/linediff.vim', { 'on':  'Linediff' }
 Plug 'godlygeek/tabular', { 'on':  'Tabularize' }
 
 " file type
-Plug 'vim-scripts/CountJump', { 'for':  'tex' }
+Plug 'Rip-Rip/clang_complete', { 'for': ['c', 'cpp'] }
+Plug 'Glench/Vim-Jinja2-Syntax', { 'for':  'jinja' }
 Plug 'suan/vim-instant-markdown', { 'for':  'markdown' }
 Plug 'gabrielelana/vim-markdown', { 'for':  'markdown' }
-Plug 'Glench/Vim-Jinja2-Syntax', { 'for':  'jinja' }
 Plug 'tmhedberg/SimpylFold', { 'for':  'python' }
+Plug 'davidhalter/jedi-vim', { 'for':  'python' }
 Plug 'Matt-Deacalion/vim-systemd-syntax', { 'for':  'systemd' }
+Plug 'vim-scripts/CountJump', { 'for':  'tex' }
 
 " keep it for reference, but not install now
 " Plug 'sk1418/HowMuch'
 " Plug 'salsifis/vim-transpose'
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 call plug#end()
-
 " }}}
 
 " get the distro name {{{
@@ -116,19 +119,6 @@ noremap <F3> :NERDTreeToggle<CR>
 noremap <leader>ntf :NERDTreeFocus<CR>
 "}}}
 
-" YouCompleteMe setting {{{
-let g:ycm_global_ycm_extra_conf = './plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_goto_buffer_command = 'new-tab'
-noremap <leader>d :YcmCompleter GoTo<CR>
-noremap <leader>dc :YcmCompleter GoToDeclaration<CR>
-noremap <leader>df :YcmCompleter GoToDefinition<CR>
-" }}}
-
-" not installed yet/maybe never{{{
-" vim-airline setting {{{
-let g:airline#extensions#tabline#enabled = 1
-" }}}
-
 " clang complete setting {{{
 if g:distro ==? "kubuntu"  
   "openSUSE"
@@ -139,10 +129,39 @@ endif
 let g:clang_use_library=1
 let g:clang_complete_copen=1
 let g:clang_hl_errors=1
+let g:clang_snippets=1
 " let g:clang_periodic_quickfix=1
 nnoremap <F7> :call g:ClangUpdateQuickFix() <CR>
 imap <F7> <ESC> <F7>
 let g:clang_jumpto_declaration_key='<leader>d'
-" let g:clang_jumpto_declaration_in_preview_key='<leader>d'
+let g:clang_jumpto_declaration_in_preview_key='<leader>dw'
+" }}}
+
+" syntastic settings {{{
+" set statusline+=%#warningmsg#
+" set statusline+=%{SyntasticStatuslineFlag()}
+" set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_cpp_compiler = 'clang++'
+" }}}
+
+" non installed {{{
+" vim-airline setting {{{
+let g:airline#extensions#tabline#enabled = 1
+" }}}
+" YouCompleteMe setting {{{
+let g:ycm_global_ycm_extra_conf = './plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_goto_buffer_command = 'new-tab'
+let g:ycm_complete_in_comments = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+
+noremap <leader>d :YcmCompleter GoTo<CR>
+noremap <leader>dc :YcmCompleter GoToDeclaration<CR>
+noremap <leader>df :YcmCompleter GoToDefinition<CR>
 " }}}
 " }}}

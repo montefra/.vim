@@ -11,6 +11,8 @@ call plug#begin('~/.vim/plugged')
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/svnj.vim'
 Plug 'vim-latex/vim-latex'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
+Plug 'ervandew/supertab'
 
 " On-demand loading
 " action
@@ -114,6 +116,15 @@ noremap <F3> :NERDTreeToggle<CR>
 noremap <leader>ntf :NERDTreeFocus<CR>
 "}}}
 
+" YouCompleteMe setting {{{
+let g:ycm_global_ycm_extra_conf = './plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+let g:ycm_goto_buffer_command = 'new-tab'
+noremap <leader>d :YcmCompleter GoTo<CR>
+noremap <leader>dc :YcmCompleter GoToDeclaration<CR>
+noremap <leader>df :YcmCompleter GoToDefinition<CR>
+" }}}
+
+" not installed yet/maybe never{{{
 " vim-airline setting {{{
 let g:airline#extensions#tabline#enabled = 1
 " }}}
@@ -133,4 +144,5 @@ nnoremap <F7> :call g:ClangUpdateQuickFix() <CR>
 imap <F7> <ESC> <F7>
 let g:clang_jumpto_declaration_key='<leader>d'
 " let g:clang_jumpto_declaration_in_preview_key='<leader>d'
+" }}}
 " }}}

@@ -26,7 +26,7 @@ Plug 'godlygeek/tabular', { 'on':  'Tabularize' }
 Plug 'Rip-Rip/clang_complete', { 'for': ['c', 'cpp'] }
 Plug 'Glench/Vim-Jinja2-Syntax', { 'for':  'jinja' }
 Plug 'suan/vim-instant-markdown', { 'for':  'markdown' }
-Plug 'gabrielelana/vim-markdown', { 'for':  'markdown' }
+Plug 'plasticboy/vim-markdown'  " , { 'for':  'markdown' } 
 Plug 'tmhedberg/SimpylFold', { 'for':  'python' }
 Plug 'davidhalter/jedi-vim', { 'for':  'python' }
 Plug 'Matt-Deacalion/vim-systemd-syntax', { 'for':  'systemd' }

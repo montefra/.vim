@@ -1,8 +1,15 @@
+" Vim configuration file.
+"
+" Unless otherwise stated:
+" Copyright (c) 2015 Francesco Montesano
+" The MIT License (MIT)
 
 " use 256 colors
 set t_Co=256
 
 " vim-plug settings {{{
+" fetch plug.vim is does not exists
+" from https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
     \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -53,7 +60,7 @@ let g:distro = system(". /etc/os-release; echo -n $NAME")
 " add the line number
 set number
  
-filetype plugin indent on
+" filetype plugin indent on
 " indentation
 set autoindent      " indent automatic
 "set smartindent     " and smart
@@ -95,6 +102,8 @@ set undofile
 "}}}
 
 " When editing a file, always jump to the last cursor position{{{
+" from the docs
+" http://vimdoc.sourceforge.net/htmldoc/eval.html#last-position-jump
 if has("autocmd")
   autocmd BufReadPost *
   \ if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -168,8 +177,8 @@ let g:airline#extensions#tabline#show_buffers = 0
 " let g:ycm_complete_in_comments = 1
 " let g:ycm_collect_identifiers_from_comments_and_strings = 1
 
-noremap <leader>d :YcmCompleter GoTo<CR>
-noremap <leader>dc :YcmCompleter GoToDeclaration<CR>
-noremap <leader>df :YcmCompleter GoToDefinition<CR>
+" noremap <leader>d :YcmCompleter GoTo<CR>
+" noremap <leader>dc :YcmCompleter GoToDeclaration<CR>
+" noremap <leader>df :YcmCompleter GoToDefinition<CR>
 " }}}
 " }}}

@@ -1,3 +1,7 @@
+
+" use 256 colors
+set t_Co=256
+
 " vim-plug settings {{{
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -7,13 +11,14 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" load always 
+" load always
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/svnj.vim'
 Plug 'vim-latex/vim-latex'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
 Plug 'szw/vim-ctrlspace'
+Plug 'bling/vim-airline'
 
 " On-demand loading
 " action
@@ -46,7 +51,7 @@ let g:distro = system(". /etc/os-release; echo -n $NAME")
 " general configuration options{{{
 
 " add the line number
-set number   
+set number
  
 filetype plugin indent on
 " indentation
@@ -55,12 +60,12 @@ set autoindent      " indent automatic
 
 " syntax color
 let fortran_free_source=1
-syntax on 
+syntax on
 
 " enable spelling. In codes checks only string and comments
 set spell
 
-" set default line width 
+" set default line width
 set textwidth=80
 
 " never use tabs and set default tab to 2 spaces
@@ -76,7 +81,7 @@ set vb t_vb=
 set ruler
 
 " When a bracket is inserted, briefly jump to the matching one.
-set showmatch       
+set showmatch
 
 " The 'scrolloff' (scroll offset) option determines the number of context
 " lines you would like to see above and below the cursor.
@@ -150,15 +155,18 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_cpp_compiler = 'clang++'
 " }}}
 
-" non installed {{{
 " vim-airline setting {{{
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_close_button = 0
+let g:airline#extensions#tabline#show_buffers = 0
 " }}}
+
+" non installed {{{
 " YouCompleteMe setting {{{
-let g:ycm_global_ycm_extra_conf = './plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_goto_buffer_command = 'new-tab'
-let g:ycm_complete_in_comments = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
+" let g:ycm_global_ycm_extra_conf = './plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+" let g:ycm_goto_buffer_command = 'new-tab'
+" let g:ycm_complete_in_comments = 1
+" let g:ycm_collect_identifiers_from_comments_and_strings = 1
 
 noremap <leader>d :YcmCompleter GoTo<CR>
 noremap <leader>dc :YcmCompleter GoToDeclaration<CR>

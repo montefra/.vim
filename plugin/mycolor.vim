@@ -1,27 +1,21 @@
 """""""""""""""""""""""""""""""""
 " Set color schemes and other colors
 """""""""""""""""""""""""""""""""
-" get the distro name {{{
-"let s:distro = system("awk '/^NAME=/ {print $1}' /etc/os-release")
-"let s:distro = split(substitute(s:distro, "\n", "", ""), "=")[1]
-"let s:distro = substitute(s:distro,'"', "", "g")
-let s:distro = system(". /etc/os-release; echo -n $NAME")
-" }}}
 
 " Select color-scheme based on distro {{{
-if s:distro ==? "openSUSE"
+" if g:distro ==? "openSUSE"
   " color comments in different color
-  highlight Comment ctermfg=lightblue
-else
-  colorscheme zellner
+  " highlight Comment ctermfg=lightblue
+" else
+  " colorscheme zellner
   "highlight Directory ctermfg=lightblue
-  highlight Comment ctermfg=darkgreen
-endif
+  " highlight Comment ctermfg=darkgreen
+" endif
 "}}}
 
 "status line hightlight. blue: current window, red: others windows {{{
-highlight StatusLine ctermbg=white ctermfg=blue
-highlight StatusLineNC ctermbg=white ctermfg=red
+" highlight StatusLine ctermbg=white ctermfg=blue
+" highlight StatusLineNC ctermbg=white ctermfg=red
 "}}}
 
 " Latex-vim{{{
@@ -30,20 +24,20 @@ highlight StatusLineNC ctermbg=white ctermfg=red
 " citation keyword, the cursor disappears or looks white when in the first
 " character(s) of the lines
 " These hightlights make the first part of the lines look as the rest
-highlight link firstAngle labelLine 
-highlight link firstSemiColon previousLine
-highlight link BibTitleHeader BibTitle
-highlight link BibAuthorHeader BibAuthor
-highlight link BibLocationHeader BibLocation
+" highlight link firstAngle labelLine 
+" highlight link firstSemiColon previousLine
+" highlight link BibTitleHeader BibTitle
+" highlight link BibAuthorHeader BibAuthor
+" highlight link BibLocationHeader BibLocation
 "}}}
  
 " fold {{{
-highlight Folded term=standout,bold cterm=bold ctermfg=Black ctermbg=DarkCyan guifg=Cyan guibg=DarkGrey
+" highlight Folded term=standout,bold cterm=bold ctermfg=Black ctermbg=DarkCyan guifg=Cyan guibg=DarkGrey
 " }}}
 
 " SpellLocal on is white on light blue background, {{{
 " making it not very easy to read
-highlight SpellLocal term=underline ctermbg=blue gui=undercurl guisp=Cyan
+" highlight SpellLocal term=underline ctermbg=blue gui=undercurl guisp=Cyan
 "}}}
 
 " return the highlight group syntax under the cursor:{{{

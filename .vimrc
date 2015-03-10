@@ -128,11 +128,6 @@ let g:SimpylFold_docstring_preview = 1
 noremap <F4> :UndotreeToggle<CR>
 "}}}
 
-" NERDTree map {{{
-" noremap <F3> :NERDTreeToggle<CR>
-" noremap <leader>ntf :NERDTreeFocus<CR>
-"}}}
-
 " clang complete setting {{{
 if g:distro ==? "kubuntu"  
   "openSUSE"

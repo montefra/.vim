@@ -129,8 +129,8 @@ noremap <F4> :UndotreeToggle<CR>
 "}}}
 
 " NERDTree map {{{
-noremap <F3> :NERDTreeToggle<CR>
-noremap <leader>ntf :NERDTreeFocus<CR>
+" noremap <F3> :NERDTreeToggle<CR>
+" noremap <leader>ntf :NERDTreeFocus<CR>
 "}}}
 
 " clang complete setting {{{

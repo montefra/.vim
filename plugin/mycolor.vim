@@ -1,6 +1,7 @@
-"""""""""""""""""""""""""""""""""
 " Set color schemes and other colors
-"""""""""""""""""""""""""""""""""
+"
+" Copyright (c) 2015 Francesco Montesano
+" The MIT License (MIT)
 
 " Select color-scheme based on distro {{{
 " if g:distro ==? "openSUSE"

@@ -1,4 +1,7 @@
 " plug-in containing searching related options
+"
+" Copyright (c) 2015 Francesco Montesano
+" The MIT License (MIT)
 
 set incsearch       " highlight next match when searching
 

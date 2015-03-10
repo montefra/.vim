@@ -3,6 +3,9 @@
 " SophHelp opens help if closed and close it if the cursor is in the help
 " file. If the cursor is on a word in a *non help* file, the help for that
 " word is searched
+"
+" Copyright (c) 2015 Francesco Montesano
+" The MIT License (MIT)
 
 function! SophHelp() " {{{1
   if &buftype=="help"  " {{{2

@@ -1,4 +1,7 @@
 " Plugin containing some maps to mover around. 
+"
+" Copyright (c) 2015 Francesco Montesano
+" The MIT License (MIT)
 
 " 'cw' and 'cW' behave like 'ce' and 'cE'. This try to fix it{{{
 " from vim help: If you prefer "cw" to include the space after a word, use this mapping: 

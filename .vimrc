@@ -140,7 +140,7 @@ let g:clang_use_library=1
 let g:clang_complete_copen=1
 let g:clang_hl_errors=1
 let g:clang_snippets=1
-" let g:clang_periodic_quickfix=1
+"let g:clang_periodic_quickfix=1
 nnoremap <F7> :call g:ClangUpdateQuickFix() <CR>
 imap <F7> <ESC> <F7>
 let g:clang_jumpto_declaration_key='<leader>d'
@@ -148,9 +148,9 @@ let g:clang_jumpto_declaration_in_preview_key='<leader>dw'
 " }}}
 
 " syntastic settings {{{
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
@@ -158,6 +158,13 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_cpp_compiler = 'clang++'
+
+let g:syntastic_mode_map = {
+    \ "mode": "passive",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": [] }
+nnoremap <F7> :SyntasticCheck <CR>
+imap <F7> <ESC> <F7>
 " }}}
 
 " vim-airline setting {{{

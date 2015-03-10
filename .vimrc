@@ -26,6 +26,7 @@ Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
 Plug 'szw/vim-ctrlspace'
 Plug 'bling/vim-airline'
+Plug 'mhinz/vim-signify'
 
 " On-demand loading
 " action

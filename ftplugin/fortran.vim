@@ -1,5 +1,8 @@
 " some specific folding for fortran taken from
 " https://bbs.archlinux.org/viewtopic.php?id=68362
+"
+" Copyright (c) 2015 Francesco Montesano
+" The MIT License (MIT)
 
 let fortran_fold=1
 "Additionally you can force folding on conditionals and multiline comments trhough

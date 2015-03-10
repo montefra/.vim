@@ -1,3 +1,7 @@
+"
+" Copyright (c) 2015 Francesco Montesano
+" The MIT License (MIT)
+
 " vim-latex suite settings{{{
 "set targets {{{
 let g:Tex_DefaultTargetFormat = 'pdf'
@@ -36,6 +40,7 @@ call IMAP ('EFS', g:Tex_Env_figures, 'tex')
 "}}}
 
 " beamer frame environment{{
+" inspired by http://utkarshu.in/Adding_frame_environment.html
 call IMAP('EFE', "\\begin{frame}\<CR>\\frametitle{<++>}\<CR><++>\<CR>\\end{frame}<++>", 'tex')
 " }}
 

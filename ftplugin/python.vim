@@ -1,11 +1,15 @@
 " Python specific options
+"
+" Copyright (c) 2015 Francesco Montesano
+" The MIT License (MIT)
 
 setlocal shiftwidth=4
 set textwidth=79
 
+" now use syntastic, so the following is uncommented
 "    <F7>        *@:call Flake8()<CR>
 " maps <F7> also in insert mode
-imap <buffer> <F7> <ESC> <F7>
+" imap <buffer> <F7> <ESC> <F7>
 
 " Toggle between tabs and not tabs (my default){{{
 function! ToggleTab()

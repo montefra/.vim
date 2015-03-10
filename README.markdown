@@ -16,12 +16,8 @@ then symlink the ``.vimrc`` file from the ``.vim`` to the home directory:
     ln -s .vimrc ../
 
 To managed the plugins I use
-[``vim-plug``](https://github.com/junegunn/vim-plug). It will be automatically fetched the
-first time you open vim. Then to install the plugins run
-
-    PlugInstall
-
-If it doesn't work, exit, restart vim and retry the above command
+[``vim-plug``](https://github.com/junegunn/vim-plug). ``vim-plug`` will be
+fetched and the plugins installed the first time you open vim.
 
 ### Installed plugins
 

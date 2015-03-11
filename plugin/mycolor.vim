@@ -36,9 +36,16 @@
 " highlight Folded term=standout,bold cterm=bold ctermfg=Black ctermbg=DarkCyan guifg=Cyan guibg=DarkGrey
 " }}}
 
+" show where the cursor is {{{
+highlight CursorLineNr  term=bold ctermfg=DarkYellow gui=bold guifg=Yellow
+highlight LineNr  term=bold ctermfg=LightYellow gui=bold guifg=LightYellow
+highlight CursorLine cterm=NONE
+"}}}
+
 " SpellLocal on is white on light blue background, {{{
 " making it not very easy to read
 " highlight SpellLocal term=underline ctermbg=blue gui=undercurl guisp=Cyan
+highlight SpellBad term=reverse ctermbg=DarkRed gui=undercurl guisp=Red
 "}}}
 
 " return the highlight group syntax under the cursor:{{{

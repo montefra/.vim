@@ -61,6 +61,8 @@ let g:distro = system(". /etc/os-release; echo -n $NAME")
 " add the line number
 set number
  
+set cursorline
+
 " filetype plugin indent on
 " indentation
 set autoindent      " indent automatic

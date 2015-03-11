@@ -21,7 +21,6 @@ call plug#begin('~/.vim/plugged')
 " load always
 Plug 'tpope/vim-fugitive'
 Plug 'vim-scripts/svnj.vim'
-Plug 'vim-latex/vim-latex'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
 Plug 'szw/vim-ctrlspace'
@@ -44,6 +43,7 @@ Plug 'tmhedberg/SimpylFold', { 'for':  'python' }
 Plug 'davidhalter/jedi-vim', { 'for':  'python' }
 Plug 'Matt-Deacalion/vim-systemd-syntax', { 'for':  'systemd' }
 Plug 'vim-scripts/CountJump', { 'for':  'tex' }
+Plug 'vim-latex/vim-latex', { 'for':  ['tex', 'bib'] }
 
 " keep it for reference, but not install now
 " Plug 'sk1418/HowMuch'

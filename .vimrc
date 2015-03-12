@@ -26,10 +26,11 @@ Plug 'scrooloose/syntastic'
 Plug 'szw/vim-ctrlspace'
 Plug 'bling/vim-airline'
 Plug 'mhinz/vim-signify'
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 
 " On-demand loading
 " action
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'mbbill/undotree', { 'on':  'UndotreeToggle' }
 Plug 'AndrewRadev/linediff.vim', { 'on':  'Linediff' }
 Plug 'godlygeek/tabular', { 'on':  'Tabularize' }

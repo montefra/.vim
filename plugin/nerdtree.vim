@@ -5,6 +5,6 @@
 
 noremap <F3> :NERDTreeMirrorToggle<CR>
 noremap <S-F3> :NERDTreeFocusToggle<CR>
-noremap <C-F3> :NERDTreeTabsFind<CR>
+noremap <leader>ff :NERDTreeFind<CR>
 
 let NERDTreeIgnore = ['\.pyc$']

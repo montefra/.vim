@@ -28,6 +28,7 @@ Plug 'bling/vim-airline'
 Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
+Plug 'majutsushi/tagbar'
 
 " On-demand loading
 " action
@@ -164,6 +165,11 @@ let g:syntastic_cpp_compiler = 'clang++'
 
 nnoremap <F7> :Errors <CR>
 imap <F7> <ESC> <F7>
+" }}}
+
+" tagbar settings {{{
+nnoremap <F8> :TagbarToggle<CR>
+imap <F8> <ESC> <F8>
 " }}}
 
 " vim-airline setting {{{

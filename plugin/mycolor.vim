@@ -26,8 +26,9 @@ highlight CursorLine cterm=NONE
 highlight SpellBad term=reverse ctermbg=DarkRed gui=undercurl guisp=Red
 "}}}
 
-" markdown headers colors{{{
+" markdown and rst headers colors{{{
 highlight htmlH1 term=bold ctermfg=yellow gui=bold guifg=Magenta
+highlight rstSections term=bold ctermfg=red gui=bold guifg=red
 "}}}
 
 " return the highlight group syntax under the cursor:{{{

@@ -6,10 +6,15 @@
 setlocal shiftwidth=4
 set textwidth=79
 
-" now use syntastic, so the following is uncommented
-"    <F7>        *@:call Flake8()<CR>
-" maps <F7> also in insert mode
-" imap <buffer> <F7> <ESC> <F7>
+" switch between python 2 and python 3 {{{
+function! SyntasticPySwitch()
+  if exists("g:syntastic_python_python_exe")
+    unlet g:syntastic_python_python_exe
+  else
+    let g:syntastic_python_python_exe = '/usr/bin/python3'
+  endif
+endfunction
+"}}}
 
 " Toggle between tabs and not tabs (my default){{{
 function! ToggleTab()
@@ -23,11 +28,11 @@ function! ToggleTab()
   if !exists("b:original_statusline") "{{{
     let b:original_statusline = &statusline
   endif "}}}
-  
+
   if b:use_tabs "{{{
     setlocal noexpandtab
     echo "Now using tabs"
-    setlocal statusline=Tabs\ enabled\ -\ 
+    setlocal statusline=Tabs\ enabled\ -\
     setlocal statusline+=%f\ %m
     setlocal statusline+=%=   " go to right
     setlocal statusline+=%l,%c%14P

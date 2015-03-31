@@ -38,7 +38,7 @@ Plug 'godlygeek/tabular', { 'on':  'Tabularize' }
 
 " file type
 Plug 'Rip-Rip/clang_complete', { 'for': ['c', 'cpp'] }
-Plug 'Glench/Vim-Jinja2-Syntax', { 'for':  'jinja' }
+" Plug 'Glench/Vim-Jinja2-Syntax', { 'for':  ['jinja', 'html'] }
 Plug 'suan/vim-instant-markdown', { 'for':  'markdown' }
 Plug 'plasticboy/vim-markdown'  " , { 'for':  'markdown' } 
 Plug 'tmhedberg/SimpylFold', { 'for':  'python' }
@@ -161,7 +161,15 @@ let g:syntastic_auto_loc_list = 2
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+" python
+let g:syntastic_python_checkers = ['flake8', 'pep8', 'pyflakes', 'python']
+" c++
 let g:syntastic_cpp_compiler = 'clang++'
+" html
+let g:syntastic_html_checkers = ['w3']
+" javascript
+let g:syntastic_javascript_checkers = ['jshint']
+" let g:syntastic_debug = 3
 
 nnoremap <F7> :Errors <CR>
 imap <F7> <ESC> <F7>

@@ -29,6 +29,7 @@ Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
+Plug 'Valloric/MatchTagAlways'
 
 " On-demand loading
 " action

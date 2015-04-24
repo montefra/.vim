@@ -167,7 +167,7 @@ let g:syntastic_python_checkers = ['flake8', 'pep8', 'pyflakes', 'python']
 " c++
 let g:syntastic_cpp_compiler = 'clang++'
 " html
-let g:syntastic_html_checkers = ['w3']
+let g:syntastic_html_checkers = ['validator']
 " javascript
 let g:syntastic_javascript_checkers = ['jshint']
 " let g:syntastic_debug = 3

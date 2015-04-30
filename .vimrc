@@ -30,6 +30,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/MatchTagAlways'
+Plug 'ryanoasis/vim-webdevicons'
 
 " On-demand loading
 " action

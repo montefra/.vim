@@ -31,6 +31,7 @@ Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/MatchTagAlways'
 Plug 'ryanoasis/vim-webdevicons'
+Plug 'EinfachToll/DidYouMean'
 
 " On-demand loading
 " action
@@ -136,7 +137,7 @@ noremap <F4> :UndotreeToggle<CR>
 "}}}
 
 " clang complete setting {{{
-if g:distro ==? "kubuntu"  
+if g:distro ==? "Ubuntu"  
   "openSUSE"
   let g:clang_library_path='/usr/lib/llvm-3.5/lib'
 "else

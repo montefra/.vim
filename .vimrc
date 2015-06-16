@@ -29,6 +29,9 @@ Plug 'mhinz/vim-signify'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
+Plug 'Valloric/MatchTagAlways'
+Plug 'ryanoasis/vim-webdevicons'
+Plug 'EinfachToll/DidYouMean'
 
 " On-demand loading
 " action
@@ -134,7 +137,7 @@ noremap <F4> :UndotreeToggle<CR>
 "}}}
 
 " clang complete setting {{{
-if g:distro ==? "kubuntu"  
+if g:distro ==? "Ubuntu"  
   "openSUSE"
   let g:clang_library_path='/usr/lib/llvm-3.5/lib'
 "else
@@ -166,7 +169,7 @@ let g:syntastic_python_checkers = ['flake8', 'pep8', 'pyflakes', 'python']
 " c++
 let g:syntastic_cpp_compiler = 'clang++'
 " html
-let g:syntastic_html_checkers = ['w3']
+let g:syntastic_html_checkers = ['validator']
 " javascript
 let g:syntastic_javascript_checkers = ['jshint']
 " let g:syntastic_debug = 3

@@ -139,9 +139,8 @@ noremap <F4> :UndotreeToggle<CR>
 " clang complete setting {{{
 if g:distro ==? "Ubuntu"  
   let g:clang_library_path=expand('/usr/lib/llvm-*/lib/libclang.so*')
-"elseif
-  "openSUSE"
-  "let g:clang_library_path='/usr/lib/llvm-3.5/lib'
+elseif g:distro ==? "openSUSE"
+  let g:clang_library_path='/usr/lib64'
 endif
 let g:clang_use_library=1
 let g:clang_complete_copen=1

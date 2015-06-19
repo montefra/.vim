@@ -83,10 +83,10 @@ set spell
 " set default line width
 set textwidth=80
 
-" never use tabs and set default tab to 2 spaces
+" never use tabs and set default tab to 4 spaces
 set expandtab
 set tabstop=4
-set shiftwidth=2
+set shiftwidth=4
 set shiftround
 
 " disable beep and flash
@@ -148,6 +148,7 @@ let g:clang_complete_copen=1
 let g:clang_hl_errors=1
 let g:clang_snippets=1
 "let g:clang_periodic_quickfix=1
+let g:clang_close_preview=1
 nnoremap <F7> :call g:ClangUpdateQuickFix() <CR>
 imap <F7> <ESC> <F7>
 let g:clang_jumpto_declaration_key='<leader>d'

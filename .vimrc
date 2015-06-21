@@ -7,6 +7,10 @@
 " use 256 colors
 set t_Co=256
 
+" get the distro name {{{
+let g:distro = system(". /etc/os-release; echo -n $NAME")
+" }}}
+
 " vim-plug settings {{{
 " fetch plug.vim is does not exists
 " from https://github.com/junegunn/vim-plug/wiki/faq#automatic-installation
@@ -55,10 +59,6 @@ Plug 'vim-latex/vim-latex', { 'for':  ['tex', 'bib'] }
 " Plug 'salsifis/vim-transpose'
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 call plug#end()
-" }}}
-
-" get the distro name {{{
-let g:distro = system(". /etc/os-release; echo -n $NAME")
 " }}}
 
 " general configuration options{{{
@@ -140,7 +140,8 @@ noremap <F4> :UndotreeToggle<CR>
 if g:distro ==? "Ubuntu"  
   let g:clang_library_path=expand('/usr/lib/llvm-*/lib/libclang.so*')
 elseif g:distro ==? "openSUSE"
-  let g:clang_library_path='/usr/lib64'
+  " let g:clang_library_path='/usr/lib64'
+  let g:clang_complete_loaded=0
 endif
 let g:clang_use_library=1
 let g:clang_complete_copen=1

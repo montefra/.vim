@@ -174,6 +174,9 @@ let g:syntastic_html_checkers = ['validator']
 " javascript
 let g:syntastic_javascript_checkers = ['jshint']
 " let g:syntastic_debug = 3
+" sphinx
+let g:syntastic_rst_checkers = ['sphinx']
+
 
 nnoremap <F7> :Errors <CR>
 imap <F7> <ESC> <F7>

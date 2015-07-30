@@ -34,7 +34,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/MatchTagAlways'
-Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-ebdevicons'
 Plug 'EinfachToll/DidYouMean'
 
 " On-demand loading
@@ -138,7 +138,7 @@ noremap <F4> :UndotreeToggle<CR>
 
 " clang complete setting {{{
 if g:distro ==? "Ubuntu"  
-  let g:clang_library_path=expand('/usr/lib/llvm-*/lib/libclang.so*')
+  let g:clang_library_path=split(expand('/usr/lib/llvm-*/lib/libclang.so*'))[-1]
 elseif g:distro ==? "openSUSE"
   " let g:clang_library_path='/usr/lib64'
   let g:clang_complete_loaded=0

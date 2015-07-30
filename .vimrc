@@ -34,7 +34,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/MatchTagAlways'
-Plug 'ryanoasis/vim-webdevicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'EinfachToll/DidYouMean'
 
 " On-demand loading
@@ -175,7 +175,7 @@ let g:syntastic_html_checkers = ['validator']
 let g:syntastic_javascript_checkers = ['jshint']
 " let g:syntastic_debug = 3
 " sphinx
-let g:syntastic_rst_checkers = ['sphinx']
+" let g:syntastic_rst_checkers = ['sphinx']
 
 
 nnoremap <F7> :Errors <CR>

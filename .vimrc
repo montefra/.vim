@@ -34,7 +34,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'majutsushi/tagbar'
 Plug 'Valloric/MatchTagAlways'
-Plug 'ryanoasis/vim-ebdevicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'EinfachToll/DidYouMean'
 
 " On-demand loading
@@ -47,7 +47,7 @@ Plug 'godlygeek/tabular', { 'on':  'Tabularize' }
 Plug 'Rip-Rip/clang_complete', { 'for': ['c', 'cpp'] }
 " Plug 'Glench/Vim-Jinja2-Syntax', { 'for':  ['jinja', 'html'] }
 Plug 'suan/vim-instant-markdown', { 'for':  'markdown' }
-Plug 'plasticboy/vim-markdown'  " , { 'for':  'markdown' } 
+Plug 'plasticboy/vim-markdown'  " , { 'for':  'markdown' }
 Plug 'tmhedberg/SimpylFold', { 'for':  'python' }
 Plug 'davidhalter/jedi-vim', { 'for':  'python' }
 Plug 'Matt-Deacalion/vim-systemd-syntax', { 'for':  'systemd' }
@@ -65,7 +65,7 @@ call plug#end()
 
 " add the line number
 set number
- 
+
 set cursorline
 
 " filetype plugin indent on
@@ -90,7 +90,7 @@ set shiftwidth=4
 set shiftround
 
 " disable beep and flash
-set vb t_vb=        
+set vb t_vb=
 
 " enable the ruler at the lower right corner
 set ruler
@@ -137,7 +137,7 @@ noremap <F4> :UndotreeToggle<CR>
 "}}}
 
 " clang complete setting {{{
-if g:distro ==? "Ubuntu"  
+if g:distro ==? "Ubuntu"
   let g:clang_library_path=split(expand('/usr/lib/llvm-*/lib/libclang.so*'))[-1]
 elseif g:distro ==? "openSUSE"
   " let g:clang_library_path='/usr/lib64'

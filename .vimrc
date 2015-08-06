@@ -66,6 +66,8 @@ call plug#end()
 " add the line number
 set number
 
+set hidden
+
 set cursorline
 
 " filetype plugin indent on

@@ -195,6 +195,11 @@ let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_buffers = 0
 " }}}
 
+" ctrlspace settings {{{
+hi link CtrlSpaceNormal Normal                                                                                                     
+hi link CtrlSpaceSelected Visual
+"}}}
+
 " non installed {{{
 " YouCompleteMe setting {{{
 " let g:ycm_global_ycm_extra_conf = './plugged/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'

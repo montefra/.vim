@@ -177,6 +177,8 @@ let g:syntastic_cpp_compiler = 'clang++'
 let g:syntastic_html_checkers = ['validator']
 " javascript
 let g:syntastic_javascript_checkers = ['jshint']
+" yaml configuration language
+let g:syntastic_yaml_checkers = ['yamlxs']
 " let g:syntastic_debug = 3
 " sphinx
 " let g:syntastic_rst_checkers = ['sphinx']

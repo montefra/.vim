@@ -36,12 +36,14 @@ Plug 'majutsushi/tagbar'
 Plug 'Valloric/MatchTagAlways'
 Plug 'ryanoasis/vim-devicons'
 Plug 'EinfachToll/DidYouMean'
+Plug 'flazz/vim-colorschemes'
 
 " On-demand loading
 " action
 Plug 'mbbill/undotree', { 'on':  'UndotreeToggle' }
 Plug 'AndrewRadev/linediff.vim', { 'on':  'Linediff' }
 Plug 'godlygeek/tabular', { 'on':  'Tabularize' }
+Plug 'qualiabyte/vim-colorstepper', { 'on': ['<Plug>ColorstepPrev', '<Plug>ColorstepNext'] }
 
 " file type
 Plug 'Rip-Rip/clang_complete', { 'for': ['c', 'cpp'] }
@@ -196,8 +198,8 @@ let g:airline#extensions#tabline#show_buffers = 0
 " }}}
 
 " ctrlspace settings {{{
-hi link CtrlSpaceNormal Normal                                                                                                     
-hi link CtrlSpaceSelected Visual
+" hi link CtrlSpaceNormal Normal                                                                                                     
+" hi link CtrlSpaceSelected Visual
 "}}}
 
 " non installed {{{

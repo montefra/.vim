@@ -3,6 +3,8 @@
 " Copyright (c) 2015 Francesco Montesano
 " The MIT License (MIT)
 
+colorscheme kkruby
+
 " Select color-scheme based on distro {{{
 " if g:distro ==? "openSUSE"
   " color comments in different color
@@ -14,21 +16,27 @@
 " endif
 "}}}
 
+" step through colors {{{
+nmap <leader>csp <Plug>ColorstepPrev
+nmap <leader>csn <Plug>ColorstepNext
+nmap <leader>csr <Plug>ColorstepReload
+"}}}
+
 " show where the cursor is {{{
-highlight CursorLineNr  term=bold ctermfg=DarkYellow gui=bold guifg=Yellow
-highlight LineNr  term=bold ctermfg=LightYellow gui=bold guifg=LightYellow
-highlight CursorLine cterm=NONE
+" highlight CursorLineNr  term=bold ctermfg=DarkYellow gui=bold guifg=Yellow
+" highlight LineNr  term=bold ctermfg=LightYellow gui=bold guifg=LightYellow
+" highlight CursorLine cterm=NONE
 "}}}
 
 " SpellLocal on is white on light blue background, {{{
 " making it not very easy to read
 " highlight SpellLocal term=underline ctermbg=blue gui=undercurl guisp=Cyan
-highlight SpellBad term=reverse ctermbg=DarkRed gui=undercurl guisp=Red
+" highlight SpellBad term=reverse ctermbg=DarkRed gui=undercurl guisp=Red
 "}}}
 
 " markdown and rst headers colors{{{
-highlight htmlH1 term=bold ctermfg=yellow gui=bold guifg=Magenta
-highlight rstSections term=bold ctermfg=red gui=bold guifg=red
+" highlight htmlH1 term=bold ctermfg=yellow gui=bold guifg=Magenta
+" highlight rstSections term=bold ctermfg=red gui=bold guifg=red
 "}}}
 
 " return the highlight group syntax under the cursor:{{{

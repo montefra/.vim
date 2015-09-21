@@ -3,7 +3,8 @@
 " Copyright (c) 2015 Francesco Montesano
 " The MIT License (MIT)
 
-colorscheme kkruby
+
+colorscheme harlequin
 
 " Select color-scheme based on distro {{{
 " if g:distro ==? "openSUSE"
@@ -16,6 +17,8 @@ colorscheme kkruby
 " endif
 "}}}
 
+highlight Visual term=reverse cterm=reverse ctermbg=236 guibg=Grey
+
 " step through colors {{{
 nmap <leader>csp <Plug>ColorstepPrev
 nmap <leader>csn <Plug>ColorstepNext
@@ -25,7 +28,7 @@ nmap <leader>csr <Plug>ColorstepReload
 " show where the cursor is {{{
 " highlight CursorLineNr  term=bold ctermfg=DarkYellow gui=bold guifg=Yellow
 " highlight LineNr  term=bold ctermfg=LightYellow gui=bold guifg=LightYellow
-" highlight CursorLine cterm=NONE
+highlight CursorLine cterm=NONE
 "}}}
 
 " SpellLocal on is white on light blue background, {{{

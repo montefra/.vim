@@ -30,10 +30,9 @@ nmap <leader>csr <Plug>ColorstepReload
 highlight CursorLine cterm=NONE
 "}}}
 
-" SpellLocal on is white on light blue background, {{{
-" making it not very easy to read
+" Spell colors, {{{
 " highlight SpellLocal term=underline ctermbg=blue gui=undercurl guisp=Cyan
-" highlight SpellBad term=reverse ctermbg=DarkRed gui=undercurl guisp=Red
+highlight SpellBad term=reverse ctermbg=DarkRed gui=undercurl guisp=Red
 "}}}
 
 " markdown and rst headers colors{{{

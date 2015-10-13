@@ -32,7 +32,7 @@ highlight CursorLine cterm=NONE
 
 " Spell colors, {{{
 " highlight SpellLocal term=underline ctermbg=blue gui=undercurl guisp=Cyan
-highlight SpellBad term=reverse ctermbg=DarkRed gui=undercurl guisp=Red
+" highlight SpellBad term=reverse ctermbg=DarkRed gui=undercurl guisp=Red
 "}}}
 
 " markdown and rst headers colors{{{

@@ -31,6 +31,12 @@ nmap <leader>csr <Plug>ColorstepReload
 highlight CursorLine cterm=NONE
 "}}}
 
+" diff and signify colors {{{
+highlight DiffAdd ctermbg=22
+highlight DiffChange ctermbg=91
+highlight DiffDelete ctermbg=88
+" }}}
+
 " Spell colors, {{{
 " highlight SpellLocal term=underline ctermbg=blue gui=undercurl guisp=Cyan
 " highlight SpellBad term=reverse ctermbg=DarkRed gui=undercurl guisp=Red

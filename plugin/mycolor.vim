@@ -3,14 +3,15 @@
 " Copyright (c) 2015 Francesco Montesano
 " The MIT License (MIT)
 
+colorscheme kkruby
+
 " Select color-scheme based on distro {{{
 if g:distro ==? "openSUSE"
-    colorscheme kkruby
-    " colorscheme harlequin
+  " colorscheme harlequin
   " color comments in different color
   " highlight Comment ctermfg=lightblue
 else
-    colorscheme harlequin
+  " colorscheme kkruby
   "highlight Directory ctermfg=lightblue
   " highlight Comment ctermfg=darkgreen
 endif

@@ -56,6 +56,10 @@ Plug 'Matt-Deacalion/vim-systemd-syntax', { 'for':  'systemd' }
 Plug 'vim-scripts/CountJump', { 'for':  'tex' }
 Plug 'vim-latex/vim-latex', { 'for':  ['tex', 'bib'] }
 
+" never activate those
+" allow to use rst with tagbar, but it's only a python file
+Plug 'jszakmeister/rst2ctags', { 'for': 'nofiletype'}
+
 " keep it for reference, but not install now
 " Plug 'sk1418/HowMuch'
 " Plug 'salsifis/vim-transpose'
@@ -191,6 +195,22 @@ imap <F7> <ESC> <F7>
 " tagbar settings {{{
 nnoremap <F8> :TagbarToggle<CR>
 imap <F8> <ESC> <F8>
+
+" rst2ctags settings
+let g:tagbar_type_rst = {
+    \ 'ctagstype': 'rst',
+    \ 'ctagsbin' : '~/.vim/plugged/rst2ctags/rst2ctags.py',
+    \ 'ctagsargs' : '-f - --sort=yes',
+    \ 'kinds' : [
+        \ 's:sections',
+        \ 'i:images'
+    \ ],
+    \ 'sro' : '|',
+    \ 'kind2scope' : {
+        \ 's' : 'section',
+    \ },
+    \ 'sort': 0,
+\ }
 " }}}
 
 " vim-airline setting {{{

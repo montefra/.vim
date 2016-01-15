@@ -56,6 +56,9 @@ Plug 'Matt-Deacalion/vim-systemd-syntax', { 'for':  'systemd' }
 Plug 'vim-scripts/CountJump', { 'for':  'tex' }
 Plug 'vim-latex/vim-latex', { 'for':  ['tex', 'bib'] }
 
+" file name
+Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux'}
+
 " never activate those
 " allow to use rst with tagbar, but it's only a python file
 Plug 'jszakmeister/rst2ctags', { 'for': 'nofiletype'}

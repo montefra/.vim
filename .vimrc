@@ -225,6 +225,9 @@ let g:airline#extensions#tabline#show_buffers = 0
 " ctrlspace settings {{{
 " hi link CtrlSpaceNormal Normal                                                                                                     
 " hi link CtrlSpaceSelected Visual
+let g:CtrlSpaceSaveWorkspaceOnExit = 1
+let g:CtrlSpaceSaveWorkspaceOnSwitch = 1
+let g:CtrlSpaceLoadLastWorkspaceOnStart = 1
 "}}}
 
 " non installed {{{

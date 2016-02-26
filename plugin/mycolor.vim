@@ -19,6 +19,13 @@ endif
 
 highlight Visual term=reverse cterm=reverse ctermbg=236 guibg=Grey
 
+" ctrlspace colors settings {{{
+" hi link CtrlSpaceNormal Normal                                                                                                     
+" hi link CtrlSpaceSelected Visual
+" highlight link CtrlSpaceStatus PmenuSbar
+highlight CtrlSpaceStatus ctermbg=240 guibg=Grey
+" }}}
+
 " step through colors {{{
 nmap <leader>csp <Plug>ColorstepPrev
 nmap <leader>csn <Plug>ColorstepNext

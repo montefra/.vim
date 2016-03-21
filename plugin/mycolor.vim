@@ -3,7 +3,7 @@
 " Copyright (c) 2015 Francesco Montesano
 " The MIT License (MIT)
 
-colorscheme kkruby
+colorscheme kkruby_or
 
 " Select color-scheme based on distro {{{
 if g:distro ==? "openSUSE"

@@ -82,7 +82,7 @@ set cursorline
 " filetype plugin indent on
 " indentation
 set autoindent      " indent automatic
-"set smartindent     " and smart
+set smartindent     " and smart
 
 " syntax color
 let fortran_free_source=1

@@ -7,4 +7,4 @@ setlocal textwidth=80
 
 let g:markdown_enable_folding = 1
 
-nnoremap <F8> :Toc <CR>
+nnoremap <buffer> <F8> :Toc <CR>

@@ -24,7 +24,6 @@ call plug#begin('~/.vim/plugged')
 
 " load always
 Plug 'tpope/vim-fugitive'
-Plug 'vim-scripts/svnj.vim'
 Plug 'ervandew/supertab'
 Plug 'scrooloose/syntastic'
 Plug 'szw/vim-ctrlspace'

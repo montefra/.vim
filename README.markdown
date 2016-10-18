@@ -23,7 +23,6 @@ fetched and the plugins installed the first time you open vim.
 
     " load always
     Plug 'tpope/vim-fugitive'
-    Plug 'vim-scripts/svnj.vim'
     Plug 'vim-latex/vim-latex'
     Plug 'ervandew/supertab'
     Plug 'scrooloose/syntastic'

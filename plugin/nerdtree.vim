@@ -7,4 +7,4 @@ noremap <F3> :NERDTreeMirrorToggle<CR>
 noremap <S-F3> :NERDTreeFocusToggle<CR>
 noremap <leader>ff :NERDTreeFind<CR>
 
-let NERDTreeIgnore = ['\.pyc$[[file]]', '__pycache__[[dir]]', '.o$[[file]]']
+let NERDTreeIgnore = ['\.pyc$[[file]]', '__pycache__[[dir]]', '\.o$[[file]]']

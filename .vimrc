@@ -55,6 +55,7 @@ Plug 'Matt-Deacalion/vim-systemd-syntax', { 'for':  'systemd' }
 Plug 'vim-scripts/CountJump', { 'for':  'tex' }
 Plug 'vim-latex/vim-latex', { 'for':  ['tex', 'bib'] }
 Plug 'fatih/vim-go', { 'for': 'go' }
+Plug 'matze/vim-ini-fold', { 'for': 'cfg' }
 
 " file name
 Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux'}

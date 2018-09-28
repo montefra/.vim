@@ -1,1 +1,1 @@
-set spelllang=de
+setlocal spelllang=de

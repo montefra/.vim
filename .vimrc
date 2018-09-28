@@ -36,6 +36,7 @@ Plug 'Valloric/MatchTagAlways'
 Plug 'ryanoasis/vim-devicons'
 Plug 'EinfachToll/DidYouMean'
 Plug 'flazz/vim-colorschemes'
+Plug 'sk1418/HowMuch'
 
 " On-demand loading
 " action
@@ -65,7 +66,6 @@ Plug 'tmux-plugins/vim-tmux', { 'for': 'tmux'}
 Plug 'jszakmeister/rst2ctags', { 'for': 'nofiletype'}
 
 " keep it for reference, but not install now
-" Plug 'sk1418/HowMuch'
 " Plug 'salsifis/vim-transpose'
 " Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 call plug#end()

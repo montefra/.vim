@@ -5,20 +5,22 @@
 " vim-latex suite settings{{{
 "set targets {{{
 let g:Tex_DefaultTargetFormat = 'pdf'
-let g:Tex_MultipleCompileFormats = 'dvi,ps,pdf'
-let g:Tex_FormatDependency_pdf = 'dvi,ps,pdf'
+let g:Tex_MultipleCompileFormats = 'pdf'
+let g:Tex_FormatDependency_pdf = 'pdf'
 "}}}
 
+
 "set compilation rules {{{
-let g:Tex_CompileRule_dvi = 'latex -interaction=nonstopmode -scr-special -synctex=1 $*'
+let g:Tex_CompileRule_dvi = 'latex -scr-special -synctex=1 $*'
 let g:Tex_CompileRule_ps = 'dvips -Ppdf -o $*.ps $*.dvi'
-let g:Tex_CompileRule_pdf = 'ps2pdf $*.ps'
+let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
 "let g:Tex_CompileRule_pdf = 'pdflatex -interaction=nonstopmode $*'
 
 "let g:Tex_ViewRule_pdf = '/usr/bin/acroread'
-let g:Tex_ViewRule_dvi = '/usr/bin/okular --unique'
-let g:Tex_ViewRule_ps = '/usr/bin/okular --unique'
-let g:Tex_ViewRule_pdf = '/usr/bin/okular --unique'
+"let g:Tex_ViewRule_dvi = '/usr/bin/okular --unique'
+let g:Tex_ViewRule_dvi = '/usr/bin/evince'
+let g:Tex_ViewRule_ps = '/usr/bin/evince'
+let g:Tex_ViewRule_pdf = '/usr/bin/evince'
 "}}}
 
 "save and compile{{{

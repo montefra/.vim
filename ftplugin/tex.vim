@@ -23,6 +23,10 @@ let g:Tex_ViewRule_ps = '/usr/bin/evince'
 let g:Tex_ViewRule_pdf = '/usr/bin/evince'
 "}}}
 
+"add frames to the list of stuff to fold{{{
+let Tex_FoldedEnvironments=",frame"
+"}}}
+
 "save and compile{{{
 map <buffer> <f12> :w<cr><leader>ll``
 imap <buffer> <f12> <ESC>:w<cr><leader>ll``i
@@ -41,9 +45,10 @@ let g:Tex_Env_figures =  "\\begin{figure*}\<cr>\\centering\<cr>\\includegraphics
 call IMAP ('EFS', g:Tex_Env_figures, 'tex')
 "}}}
 
-" beamer frame environment{{
+" beamer environments{{
 " inspired by http://utkarshu.in/Adding_frame_environment.html
 call IMAP('EFE', "\\begin{frame}\<CR>\\frametitle{<++>}\<CR><++>\<CR>\\end{frame}<++>", 'tex')
+call IMAP('EBL', "\\begin{block}{<++>}\<CR><++>\<CR>\\end{block}<++>", 'tex')
 " }}
 
 " maps for equation, table, figure, appendix and section reference{{{

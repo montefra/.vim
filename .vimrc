@@ -37,6 +37,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'EinfachToll/DidYouMean'
 Plug 'flazz/vim-colorschemes'
 Plug 'sk1418/HowMuch'
+Plug 'hashivim/vim-vagrant'
+Plug 'rust-lang/rust.vim'
 
 " On-demand loading
 " action
@@ -178,7 +180,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " python
-let g:syntastic_python_checkers = ['flake8', 'pycodestyle', 'pyflakes', 'python']
+let g:syntastic_python_checkers = ['flake8', 'pycodestyle', 'pyflakes', 'python', 'mypy']
 " c++
 let g:syntastic_cpp_compiler = 'clang++'
 " html
